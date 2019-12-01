@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- After you execute this test, notice the total time taken for execution. It should be 
+somewhere around 10 - 15 seconds. But we have 10 seconds Thread.sleep in each of our tests.
+This proves that the 3 tests are executed parallelly in different threads. -->
+
+<suite name="TestNG Parallel" parallel = "methods" thread-count="10" verbose="10">
+  <test verbose="2" name="ParallelExecutionInSameClassFile">
+    <classes>
+      <class name="com.destinationqa.grid.TestNgParallelExecution"/>
+    </classes>
+  </test>
+</suite> <!-- Default suite -->

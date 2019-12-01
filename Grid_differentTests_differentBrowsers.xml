@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- Note that here, we have used parallel execution at suite tag as well as test tag. This is 
+because, we want to execute all tests in parallel 3 tests each for IE, Chrome and Browser. Observe
+that the IE tests will run in sequence, since we are executing on a single note. If we have multiple 
+nodes available, then IE tests will also run in parallel. 
+By default, a Selenium node will run 5 sessions of Firefox, 5 sessions of Chrome and 1 session 
+of IE, but it can only run a total of 5 sessions on parallel.-->
+
+<suite name="SeleniumGridExample" parallel="tests" thread-count="10" verbose="10">
+
+  <test name="myTest1" parallel="methods">    
+      <parameter name="browser" value="internet explorer"/>      
+      <classes>
+          <class name="com.destinationqa.grid.Grid_differentTests_differentBrowsers"></class>
+      </classes>
+  </test> <!-- Test -->
+  <test name="myTest2" parallel="methods">    
+      <parameter name="browser" value="chrome"/>      
+ 	  <classes>
+          <class name="com.destinationqa.grid.Grid_differentTests_differentBrowsers"></class>
+      </classes>
+  </test> <!-- Test -->
+  <test name="myTest3" parallel="methods">    
+      <parameter name="browser" value="firefox"/>      
+  	 <classes>
+          <class name="com.destinationqa.grid.Grid_differentTests_differentBrowsers"></class>
+      </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

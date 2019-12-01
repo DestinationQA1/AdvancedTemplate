@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SeleniumGridExample" parallel="tests" thread-count="3" verbose="4">
+  <test name="myTest2">    
+      <parameter name="browser" value="chrome"/>      
+ 	  <classes>
+          <class name="com.destinationqa.grid.Grid_sameTest_differentBrowsers"></class>
+      </classes>
+  </test> <!-- Test -->
+  <test name="myTest3">    
+      <parameter name="browser" value="firefox"/>      
+  	 <classes>
+          <class name="com.destinationqa.grid.Grid_sameTest_differentBrowsers"></class>
+      </classes>
+  </test> <!-- Test -->
+  
+  
+</suite> <!-- Suite -->

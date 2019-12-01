@@ -1,0 +1,2 @@
+cd
+java -Dwebdriver.gecko.driver="D:\Selenium\geckodriver.exe" -Dwebdriver.chrome.driver=D:\Selenium\chromedriver.exe -Dwebdriver.ie.driver=D:\Selenium\IEDriverServer.exe -jar selenium-server-standalone-3.11.0.jar -role webdriver -port 5557 -hub http://localhost:4444/grid/register
